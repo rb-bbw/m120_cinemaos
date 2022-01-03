@@ -12,10 +12,10 @@ function App() {
             <Navigation/>
             <Container>
                 <Routes>
-                    <Route path="/" element={<WelcomeScreen />}>
-                        <Route path="snacks" element={<SnacksScreen />} />
-                        <Route path="lavatory" element={<ToiletRadar />} />
-                    </Route>
+                    {/* TODO nested route */}
+                    <Route path="/" element={<WelcomeScreen />} />
+                    <Route path="/snacks" element={<SnacksScreen />} />
+                    <Route path="/lavatory" element={<ToiletRadar />} />
                 </Routes>
             </Container>
         </>
