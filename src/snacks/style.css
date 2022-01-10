@@ -2,3 +2,18 @@
     overflow-x: auto;
     flex-wrap: unset;
 }
+
+.card-body > p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    margin-bottom: 0;
+}
+
+.card button {  /* make non-stretched-link buttons clickable */
+    position: relative;
+    z-index: 1;
+}

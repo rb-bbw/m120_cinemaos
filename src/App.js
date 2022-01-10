@@ -3,7 +3,8 @@ import {Container} from 'react-bootstrap';
 import WelcomeScreen from './welcome/WelcomeScreen';
 import {Route, Routes} from 'react-router-dom';
 import Navigation from './common/Navigation';
-import SnacksOverview from './snacks/SnacksOverview';
+import AssortmentOverview from './snacks/AssortmentOverview';
+import ItemDetail from './snacks/ItemDetail';
 import ToiletRadar from "./lavatory/ToiletRadar";
 
 function App() {
@@ -14,7 +15,8 @@ function App() {
                 <Routes>
                     {/* TODO nested route */}
                     <Route path="/" element={<WelcomeScreen />} />
-                    <Route path="/snacks" element={<SnacksOverview />} />
+                    <Route path="/assortment" element={<AssortmentOverview />} />
+                    <Route path="/assortment/:category/:item" element={<ItemDetail />} />
                     <Route path="/lavatory" element={<ToiletRadar />} />
                 </Routes>
             </Container>
