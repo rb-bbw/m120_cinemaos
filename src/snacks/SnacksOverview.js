@@ -7,30 +7,22 @@ export default function SnacksOverview() {
     const drinks = Object.entries(assortment.drinks);
     return (
         <>
-            <Row className="horizontal-scrollable" >
-                {
-                    snacks.map(([key, snack]) =>
-                        <Col lg={3} key={key}>
-                            <Card>
-                                <Card.Img src={snack.image}/>
-                                <Card.Title>{snack.title}</Card.Title>
-                            </Card>
-                        </Col>
-                    )
-                }
-            </Row>
-            <Row className="horizontal-scrollable" >
-                {
-                    drinks.map(([key, drink]) =>
-                        <Col lg={3} key={key}>
-                            <Card>
-                                <Card.Img src={drink.image}/>
-                                <Card.Title>{drink.title}</Card.Title>
-                            </Card>
-                        </Col>
-                    )
-                }
-            </Row>
+            {
+                Object.entries(assortment).map(([key, category]) =>
+                    <Row className="horizontal-scrollable" key={key}>
+                        {
+                            Object.entries(category).map(([key, item]) =>
+                                <Col lg={3} key={key}>
+                                    <Card>
+                                        <Card.Img src={item.image}/>
+                                        <Card.Title>{item.title}</Card.Title>
+                                    </Card>
+                                </Col>
+                            )
+                        }
+                    </Row>
+                )
+            }
         </>
     );
 }

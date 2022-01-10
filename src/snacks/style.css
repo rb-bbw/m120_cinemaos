@@ -1,0 +1,4 @@
+.horizontal-scrollable.row {
+    overflow-x: auto;
+    flex-wrap: unset;
+}
