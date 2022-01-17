@@ -1,9 +1,10 @@
 import {Button, Card, Col, Row} from "react-bootstrap";
 import {assortment} from './AssortmentService';
 import './style.css'
+import AddToCart from "./AddToCart";
 
 // TODO placeholder image with loading animation
-export default function AssortmentOverview() {
+export default function AssortmentOverview({cart, setCart}) {
     return (<>
         {Object.entries(assortment).map(([categoryKey, category]) =>
             <Row lg={5} className="horizontal-scrollable" key={categoryKey}>
@@ -17,14 +18,11 @@ export default function AssortmentOverview() {
                                 <Button
                                     href={`assortment/${categoryKey}/${itemKey}`}
                                     variant="primary"
-                                    className="stretched-link">
+                                    className="stretched-link"
+                                    size="sm">
                                     Details
                                 </Button>
-                                <Button
-                                    onClick={() => console.log("add to cart")}
-                                    variant="primary">
-                                    Add to Cart
-                                </Button>
+                                <AddToCart cart={cart} setCart={setCart} item={item} size="sm" />
                             </Card.Body>
                         </Card>
                     </Col>

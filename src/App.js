@@ -19,7 +19,8 @@ function App() {
             <Container>
                 <Routes>
                     <Route path="/" element={<WelcomeScreen />} />
-                    <Route path="/assortment" element={<AssortmentOverview />} />
+                    <Route path="/assortment"
+                           element={<AssortmentOverview cart={cart} setCart={setCart} />} />
                     <Route path="/assortment/:category/:item"
                            element={<ItemDetail cart={cart} setCart={setCart} />} />
                     <Route path="/lavatory" element={<ToiletRadar />} />

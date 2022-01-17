@@ -1,3 +1,6 @@
 export function formatPrice(price) {
-    return (price / 100).toFixed(2);
+    return new Intl.NumberFormat(
+        'de-CH',
+        {style: 'currency', currency: 'CHF'})
+        .format(price / 100);
 }
