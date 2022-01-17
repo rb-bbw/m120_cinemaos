@@ -1,7 +1,8 @@
-import {Button, ButtonGroup, Card, Col, Row} from "react-bootstrap";
+import {Button, Card, Col, Row} from "react-bootstrap";
 import {assortment} from './AssortmentService';
 import './style.css'
 
+// TODO placeholder image with loading animation
 export default function AssortmentOverview() {
     return (<>
         {Object.entries(assortment).map(([categoryKey, category]) =>

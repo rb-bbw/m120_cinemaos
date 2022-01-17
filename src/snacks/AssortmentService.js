@@ -17,7 +17,7 @@ export const assortment = {
         popcorn: item("Popcorn", 450),
         sushi: item("Sushi", 450),
         foo: item("foo", 450),
-        bar: item("foo", 450),
+        bar: item("bar", 450),
     },
     drinks: {
         beer: item("Beer", 450)

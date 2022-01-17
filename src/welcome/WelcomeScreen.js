@@ -11,7 +11,7 @@ export default function WelcomeScreen() {
         </Link>
       </Col>
       <Col>
-        <Link to="/snacks">
+        <Link to="/assortment">
           <WelcomeIcon src="https://picsum.photos/seed/00/300?grayscale" text="I wanna eat"/>
         </Link>
       </Col>

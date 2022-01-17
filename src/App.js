@@ -6,17 +6,22 @@ import Navigation from './common/Navigation';
 import AssortmentOverview from './snacks/AssortmentOverview';
 import ItemDetail from './snacks/ItemDetail';
 import ToiletRadar from "./lavatory/ToiletRadar";
+import {useState} from "react";
 
+// TODO nested route
 function App() {
+    const [cart, setCart] = useState({
+        balance: 4250, items: []
+    })
     return (
         <>
             <Navigation/>
             <Container>
                 <Routes>
-                    {/* TODO nested route */}
                     <Route path="/" element={<WelcomeScreen />} />
                     <Route path="/assortment" element={<AssortmentOverview />} />
-                    <Route path="/assortment/:category/:item" element={<ItemDetail />} />
+                    <Route path="/assortment/:category/:item"
+                           element={<ItemDetail cart={cart} setCart={setCart} />} />
                     <Route path="/lavatory" element={<ToiletRadar />} />
                 </Routes>
             </Container>
