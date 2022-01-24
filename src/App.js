@@ -6,12 +6,11 @@ import Navigation from './common/Navigation';
 import AssortmentOverview from './snacks/AssortmentOverview';
 import ItemDetail from './snacks/ItemDetail';
 import ToiletRadar from "./lavatory/ToiletRadar";
-import {useState} from "react";
+import usePersistedState from 'use-persisted-state-hook';
 
 // TODO nested route
-// TODO use localStorage https://medium.com/swlh/persisting-state-on-react-apps-726c310f35ed
 export default function App() {
-    const [cart, setCart] = useState({
+    const [cart, setCart] = usePersistedState("cart",{
         balance: 4250, items: []
     })
     return (
