@@ -1,4 +1,4 @@
-import {Button} from "react-bootstrap";
+import {Button, OverlayTrigger, Tooltip} from "react-bootstrap";
 import {formatPrice} from "../common/Helpers";
 
 export default function AddToCart({cart, setCart, item, size}) {
@@ -15,12 +15,23 @@ export default function AddToCart({cart, setCart, item, size}) {
     }
 
     return (
-        <Button
-            onClick={buyOne}
-            variant="primary"
-            disabled={!canBuy()}
-            size={size}>
-            🛒 {formatPrice(item.price)}
-        </Button>
+        <OverlayTrigger
+            trigger="click"
+            overlay={
+                <Tooltip id={`tooltip`}>
+                    Item bought. See sidebar.
+                </Tooltip>
+            }
+            placement="right"
+        >
+            <Button
+                onClick={buyOne}
+                variant="primary"
+                disabled={!canBuy()}
+                size={size}
+            >
+                🛒 {formatPrice(item.price)}
+            </Button>
+        </OverlayTrigger>
     );
 }
