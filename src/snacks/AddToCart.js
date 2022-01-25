@@ -18,9 +18,7 @@ export default function AddToCart({cart, setCart, item, size}) {
         <OverlayTrigger
             trigger="click"
             overlay={
-                <Tooltip id={`tooltip`}>
-                    Item bought. See sidebar.
-                </Tooltip>
+                <Tooltip id="itemBoughtTooltip">Item bought. See sidebar.</Tooltip>
             }
             placement="right"
         >
