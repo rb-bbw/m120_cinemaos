@@ -15,7 +15,7 @@ export default function App() {
     return (
         <>
             <Navigation cart={cart} setCart={setCart}/>
-            <Container>
+            <Container className="mt-5">
                 <Routes>
                     <Route path="/" element={<WelcomeScreen/>}/>
                     <Route

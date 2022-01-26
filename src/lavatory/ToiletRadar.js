@@ -14,15 +14,18 @@ export default function ToiletRadar({props}) {
             <Button
                 onClick={handleShow}
                 className={style.button}
+                aria-controls="offcanvasAvailableStalls"
             >🚽</Button>
             <Offcanvas
                 show={show}
                 onHide={handleClose}
                 {...props}
                 className={style.offcanvas}
+                id="offcanvasAvailableStalls"
+                aria-labelledby="availableStalls"
             >
                 <Offcanvas.Header closeButton>
-                    <Offcanvas.Title>Available Stalls</Offcanvas.Title>
+                    <Offcanvas.Title id="availableStalls">Available Stalls</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                     <Image src={image} className={style.image}/>

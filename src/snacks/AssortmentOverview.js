@@ -7,7 +7,7 @@ export default function AssortmentOverview({cart, setCart}) {
     return (
         <>
             {Object.entries(assortment).map(([categoryKey, category]) =>
-                <Row lg={5} className="horizontal-scrollable" key={categoryKey}>
+                <Row lg={5} className="horizontally-scrollable mb-5" key={categoryKey}>
                     {Object.entries(category).map(([itemKey, item]) =>
                         <Col key={itemKey}>
                             <AssortmentItem {...{cart, setCart, item, itemKey, categoryKey}}/>

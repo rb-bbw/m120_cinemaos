@@ -8,14 +8,16 @@ export default function AssortmentItem({cart, setCart, item, categoryKey, itemKe
             <Card.Body>
                 <Card.Title>{item.title}</Card.Title>
                 <p>{item.description}</p>
-                <Button
-                    href={`assortment/${categoryKey}/${itemKey}`}
-                    variant="primary"
-                    className="stretched-link"
-                    size="sm">
-                    Details
-                </Button>
-                <AddToCart cart={cart} setCart={setCart} item={item} size="sm" />
+                <div className="d-flex justify-content-between mt-2">
+                    <Button
+                        href={`assortment/${categoryKey}/${itemKey}`}
+                        variant="primary"
+                        className="stretched-link"
+                        size="sm">
+                        Details
+                    </Button>
+                    <AddToCart cart={cart} setCart={setCart} item={item} size="sm" />
+                </div>
             </Card.Body>
         </Card>
     );

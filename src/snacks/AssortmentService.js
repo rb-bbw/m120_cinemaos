@@ -17,9 +17,16 @@ export const assortment = {
         popcorn: item("Popcorn", 450),
         sushi: item("Sushi", 450),
         foo: item("foo", 450),
-        bar: item("bar", 450),
+        enough: item("enough", 450),
+        to: item("to", 450),
+        scroll: item("scroll", 450),
     },
     drinks: {
-        beer: item("Beer", 450)
+        beer: item("Beer", 450),
+        cola: item("Cola", 450),
+        water: item("Water", 450),
+        enough: item("enough", 450),
+        to: item("to", 450),
+        scroll: item("scroll", 450),
     },
 };

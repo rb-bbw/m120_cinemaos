@@ -18,7 +18,7 @@ export default function Navigation({cart, setCart}) {
 
                 <Navbar.Text>
                     {formatPrice(cart.balance)}
-                    <Navbar.Toggle aria-controls="offcanvasNavbar"/>
+                    <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-3"/>
                 </Navbar.Text>
 
                 <Navbar.Offcanvas
