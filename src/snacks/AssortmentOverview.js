@@ -1,33 +1,20 @@
-import {Button, Card, Col, Row} from "react-bootstrap";
+import {Col, Row} from "react-bootstrap";
 import {assortment} from './AssortmentService';
-import './style.css'
-import AddToCart from "./AddToCart";
+import './assortment.css'
+import AssortmentItem from "./AssortmentItem";
 
-// TODO placeholder image with loading animation
 export default function AssortmentOverview({cart, setCart}) {
-    return (<>
-        {Object.entries(assortment).map(([categoryKey, category]) =>
-            <Row lg={5} className="horizontal-scrollable" key={categoryKey}>
-                {Object.entries(category).map(([itemKey, item]) =>
-                    <Col key={itemKey}>
-                        <Card>
-                            <Card.Img src={item.image} alt={`Image of ${item.title}`}/>
-                            <Card.Body>
-                                <Card.Title>{item.title}</Card.Title>
-                                <p>{item.description}</p>
-                                <Button
-                                    href={`assortment/${categoryKey}/${itemKey}`}
-                                    variant="primary"
-                                    className="stretched-link"
-                                    size="sm">
-                                    Details
-                                </Button>
-                                <AddToCart cart={cart} setCart={setCart} item={item} size="sm" />
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                )}
-            </Row>
-        )}
-    </>);
+    return (
+        <>
+            {Object.entries(assortment).map(([categoryKey, category]) =>
+                <Row lg={5} className="horizontal-scrollable" key={categoryKey}>
+                    {Object.entries(category).map(([itemKey, item]) =>
+                        <Col key={itemKey}>
+                            <AssortmentItem {...{cart, setCart, item, itemKey, categoryKey}}/>
+                        </Col>
+                    )}
+                </Row>
+            )}
+        </>
+    );
 }
