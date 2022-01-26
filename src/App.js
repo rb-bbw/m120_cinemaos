@@ -5,10 +5,9 @@ import {Route, Routes} from 'react-router-dom';
 import Navigation from './common/Navigation';
 import AssortmentOverview from './snacks/AssortmentOverview';
 import ItemDetail from './snacks/ItemDetail';
-import ToiletRadar from "./lavatory/ToiletRadar";
+import Lavatory from "./lavatory/Lavatory";
 import usePersistedState from 'use-persisted-state-hook';
 
-// TODO nested route
 export default function App() {
     const [cart, setCart] = usePersistedState("cart",{
         balance: 4250, items: []
@@ -27,7 +26,7 @@ export default function App() {
                         path="/assortment/:category/:item"
                         element={<ItemDetail cart={cart} setCart={setCart}/>}
                     />
-                    <Route path="/lavatory" element={<ToiletRadar/>}/>
+                    <Route path="/lavatory" element={<Lavatory/>}/>
                 </Routes>
             </Container>
         </>

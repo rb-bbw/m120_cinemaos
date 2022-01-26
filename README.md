@@ -1,7 +1,6 @@
 # CinemaOS
 
 This is a starter-kit for a CinemaOS.
-The [original pitch](./CinemaOs.pdf) can serve as a rough guideline.
 
 ## Goal
 
@@ -13,7 +12,7 @@ The [original pitch](./CinemaOs.pdf) can serve as a rough guideline.
   - style focus
     - low-light / dark-theme only
     - tablet only
-    - plain, simple design with good accessability for the target-group
+    - plain, simple design with good accessibility for the target-group
   - usable without keyboard input
 - explicitly excluded
   - user login (the user is known by the device in use)

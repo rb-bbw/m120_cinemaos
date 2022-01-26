@@ -1,0 +1,16 @@
+.button {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    font-size: xx-large;
+}
+.offcanvas {
+    width: unset;
+}
+.image {
+    height: 100%;
+}
